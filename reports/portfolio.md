@@ -62,4 +62,4 @@ All targets below are planning gates, not achieved field results. Confirm thresh
 
 ## Supporting analysis
 
-[Formatted writing sample (PDF)](Microvan_Writing_Sample.pdf) · [Full technical report (PDF)](Microvan_Technical_Report.pdf) · [Results](../results/) · [Source scripts](../microvan_v3/) · [Notebook](../notebooks/01_business_facing_analysis.ipynb)
+[Full technical report (PDF)](Microvan_Technical_Report.pdf) · [Results](../results/) · [Source scripts](../microvan_v3/) 
