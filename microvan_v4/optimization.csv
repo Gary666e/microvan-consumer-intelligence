@@ -1,0 +1,17 @@
+budget,capacity,segment_min,method,contacts,cost,expected_high_interest,observed_high_interest,mip_gap,status
+800,60,0,MILP,60.0,800.0,33.56489312377986,35.0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal)
+800,60,0,Probability rank,42.0,800.0,28.456634857554192,24.0,,heuristic
+800,60,0,Probability/cost,60.0,780.0,32.983246838893656,35.0,,heuristic
+800,60,0,Random feasible,42.89,797.46,12.391471746184589,12.88,,heuristic
+1500,100,0,MILP,100.0,1500.0,52.78202392119456,57.0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal)
+1500,100,0,Probability rank,81.0,1500.0,48.80024533406252,49.0,,heuristic
+1500,100,0,Probability/cost,100.0,1483.0,52.39823440334489,57.0,,heuristic
+1500,100,0,Random feasible,80.05,1497.6,23.326283380760916,24.14,,heuristic
+1500,100,10,MILP,100.0,1500.0,52.78202392119456,57.0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal)
+1500,100,10,Probability rank,78.0,1496.0,46.421783937355364,45.0,,heuristic
+1500,100,10,Probability/cost,100.0,1483.0,52.39823440334489,57.0,,heuristic
+1500,100,10,Random feasible,80.05,1497.6,23.326283380760916,24.14,,heuristic
+2200,140,10,MILP,140.0,2200.0,67.91398086565857,73.0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal)
+2200,140,10,Probability rank,117.0,2200.0,64.25727829398613,66.0,,heuristic
+2200,140,10,Probability/cost,139.0,2194.0,67.80691008901616,74.0,,heuristic
+2200,140,10,Random feasible,116.9,2197.36,34.30612247686564,35.39,,heuristic
