@@ -1,5 +1,7 @@
 # Microvan Consumer Preference Intelligence
 
+> Archived research report. Original PNG exhibits are included in the release asset package; the web portfolio contains immediately viewable SVG charts.
+
 Predictive modeling, statistical inference, segmentation and constrained decision optimization
 
 Kangjie Lin | Applied Data Science | Technical writing sample
@@ -37,7 +39,7 @@ The dataset contains 400 screened respondents, 30 psychographic items, one likin
 | Mean liking / standard deviation | 4.843 / 2.690 |
 | Cook’s distance > 4/n / maximum | 22 / 0.0339 |
 
-![Exhibit 1. Observed outcome distribution. No records were excluded; Cook’s distance flags are exploratory, not proof of invalid observations.](microvan_v3/distribution.png)
+![Exhibit 1. Observed outcome distribution. No records were excluded; Cook’s distance flags are exploratory, not proof of invalid observations.](../microvan_v3/distribution.png)
 
 ### Regression baseline and feature selection
 
@@ -51,7 +53,7 @@ Backward AIC selection retains 11 attributes (adjusted R² 0.3395; AIC 1772.7 vs
 
 A correlation-based PCA diagnostic yields five eigenvalues above one (8.28, 5.00, 3.09, 2.71, 1.80); the sixth is 0.63. Parallel analysis using 200 independent Gaussian reference matrices and the 95th-percentile eigenvalue also supports five dimensions. KMO = 0.923 and Bartlett χ²(435) = 7,884.1 support factorability.
 
-![Exhibit 2. PCA eigenvalues and simulated reference. PCA is used for dimension selection, not as the fitted factor-score model.](microvan_v3/scree.png)
+![Exhibit 2. PCA eigenvalues and simulated reference. PCA is used for dimension selection, not as the fitted factor-score model.](../microvan_v3/scree.png)
 
 Maximum-likelihood factor analysis with orthogonal Varimax rotation explains 64.0% of total standardized item variance (sum of squared loadings / 30). Factor signs and ordering are anchored to the corresponding item wording. Representative signed loadings:
 
@@ -71,7 +73,7 @@ The Safety factor contrasts safety/warranty/4WD preference with performance prio
 
 Replacing 30 items with five factor scores gives R² = 0.3365 and adjusted R² = 0.3281. This retains 90.3% of baseline in-sample R², but the more meaningful test is generalization to held-out observations. Coefficients are associations on estimated factor-score scales and are not causal effects.
 
-![Exhibit 3. Factor OLS coefficients with conventional 95% confidence intervals; intervals condition on estimated scores.](microvan_v3/coefficients.png)
+![Exhibit 3. Factor OLS coefficients with conventional 95% confidence intervals; intervals condition on estimated scores.](../microvan_v3/coefficients.png)
 
 | Factor | Coefficient | p-value | 95% CI |
 | --- | --- | --- | --- |
@@ -93,7 +95,7 @@ The item loadings associate the large negative coefficient with a safety/perform
 
 The initial eight candidate models use identical shuffled five-fold outer splits (seed 42), with four-fold inner tuning for hyperparameters. Standardization and factor extraction are fitted within each training split. The five-factor specification is motivated by exploratory factor analysis; no independent external test set exists. OOF metrics pool each respondent’s single outer-fold prediction. The target is treated as numeric; no predictions are clipped.
 
-![Exhibit 4. Cross-validated predictive error on the survey sample.](microvan_v3/cv.png)
+![Exhibit 4. Cross-validated predictive error on the survey sample.](../microvan_v3/cv.png)
 
 | Model | RMSE | MAE | OOF R² | Fold RMSE SD |
 | --- | --- | --- | --- | --- |
@@ -114,7 +116,7 @@ Factor OLS lowers RMSE by 17.2% versus the mean baseline and 3.7% versus full OL
 
 Ward hierarchical clustering provides an exploratory comparison. K-means is then fit to the five factor scores for k = 2–6, using 30 initializations. Neither liking nor demographics enter clustering. Evaluate internal separation (silhouette and Davies–Bouldin), then bootstrap the complete factor-scoring and K-means pipeline 50 times, scoring agreement with the reference labels on all original observations using adjusted Rand index (ARI).
 
-![Exhibit 5. Stability and separation across candidate segment counts.](microvan_v3/validation.png)
+![Exhibit 5. Stability and separation across candidate segment counts.](../microvan_v3/validation.png)
 
 | k | Silhouette ↑ | DB ↓ | Median ARI ↑ | P10 ARI ↑ |
 | --- | --- | --- | --- | --- |
@@ -130,7 +132,7 @@ Three clusters offer the highest silhouette (0.235) and strongest lower-tail sta
 
 ## 06 / Segment validation and targeting
 
-![Exhibit 6. Mean concept liking by independently constructed attitude segment.](microvan_v3/appeal.png)
+![Exhibit 6. Mean concept liking by independently constructed attitude segment.](../microvan_v3/appeal.png)
 
 | Profile | Luxury pragmatists | Status seekers | Disengaged |
 | --- | --- | --- | --- |
@@ -162,7 +164,7 @@ Define a high-interest respondent as one with concept liking ≥7 (120/400, 30%)
 | Random forest | 0.724 | 0.507 | 0.182 | 56% | 1.87× |
 | XGBoost | 0.699 | 0.480 | 0.188 | 53% | 1.77× |
 
-![Exhibit 7. Cross-fitted cumulative gains. Random line represents expected capture.](microvan_v4/gain_curve.png)
+![Exhibit 7. Cross-fitted cumulative gains. Random line represents expected capture.](../microvan_v4/gain_curve.png)
 
 Factor OLS captures 62/120 high-interest respondents using 100 contacts (62% precision, 51.7% recall, 2.07× lift). The calibrated factor classifier captures 59/120 (59% precision, 49.2% recall, 1.97× lift). OLS is the better observed ranker; use factor logistic when an explicit probability is needed. The 30% constant random baseline has expected AUC .5, AP .30 and lift 1. A cross-fold training-prevalence predictor has artificial ranking variation, so its pooled ranking statistics are not used as the random reference.
 
@@ -170,7 +172,7 @@ Factor OLS captures 62/120 high-interest respondents using 100 contacts (62% pre
 
 ## 08 / Calibration and ordinal sensitivity
 
-![Exhibit 8. Five equal-sized held-out probability bins, 80 respondents each. Descriptive calibration, not external validation.](microvan_v4/reliability.png)
+![Exhibit 8. Five equal-sized held-out probability bins, 80 respondents each. Descriptive calibration, not external validation.](../microvan_v4/reliability.png)
 
 | Quintile | Mean p | Observed rate |
 | --- | --- | --- |
@@ -209,7 +211,7 @@ Repeat the nested benchmark for factor OLS, Ridge and full OLS using three shuff
 
 The paired intervals resample respondents and their repeated cross-fitted squared errors 1,000 times. They condition on fitted predictions and omit retraining variance; they are descriptive, not a definitive test of model superiority.
 
-![Exhibit 9. Twenty independent random split assignments; splits overlap in respondents.](microvan_v4/conformal_coverage.png)
+![Exhibit 9. Twenty independent random split assignments; splits overlap in respondents.](../microvan_v4/conformal_coverage.png)
 
 Split conformal prediction uses 240 training, 80 calibration and 80 test observations. The 90% radius is the 73rd ordered absolute calibration residual; intersect the interval with [1,9]. Mean test coverage is 91.4% (range 82.5%–97.5%); mean width is 6.40 points. Wide intervals demonstrate substantial individual uncertainty. Marginal coverage requires exchangeable future observations, not per-person certainty.
 
@@ -219,7 +221,7 @@ Split conformal prediction uses 240 training, 80 calibration and 80 test observa
 
 Compare 5, 10, 15, 20 and 30 questionnaire items. Four selection policies operate only on outer training data: univariate F-test and Lasso coefficient ranking (Ridge alpha tuned inside the fold), factor-loading round robin and greedy forward selection (fixed Ridge alpha 10). Forward selection minimizes four-fold training CV error. Reduced models consume only selected original items, unlike five-factor scoring which still needs all 30.
 
-![Exhibit 10. Out-of-fold error versus required questions. Selection and tuning occur without outer test labels.](microvan_v4/survey_tradeoff.png)
+![Exhibit 10. Out-of-fold error versus required questions. Selection and tuning occur without outer test labels.](../microvan_v4/survey_tradeoff.png)
 
 | Items | F-test | Lasso | Loadings | Forward |
 | --- | --- | --- | --- | --- |
@@ -237,7 +239,7 @@ The 10-item loading policy reaches RMSE 2.272, only 0.39% above the tuned 30-ite
 
 The factor-regression pipeline is affine in original items: f(x) = b + Σ wⱼ(xⱼ − μⱼ), where μ is the outer training mean. These exact interventional linear SHAP contributions use the marginal background mean and sum to each held-out prediction; they do not estimate conditional SHAP under correlated features or causal effects. Separately, permutation importance measures increase in outer-fold MSE when an original item is shuffled (8 permutations per fold).
 
-![Exhibit 11. Mean absolute linear contributions; feature codes follow the case survey appendix.](microvan_v4/importance.png)
+![Exhibit 11. Mean absolute linear contributions; feature codes follow the case survey appendix.](../microvan_v4/importance.png)
 
 | Subgroup | n | RMSE | Mean error (pred − actual) |
 | --- | --- | --- | --- |
@@ -261,7 +263,7 @@ The ≥45 group is underpredicted by 0.48 points on average; the two recorded ge
 
 Gaussian mixture models (GMM) provide an alternative to hard K-means labels, permitting component-specific covariance and posterior membership probabilities. Compare diagonal and full covariance across 2–6 components using Bayesian information criterion (BIC), silhouette and ARI versus the three-cluster K-means solution. Fit without liking or demographics.
 
-![Exhibit 12. BIC favors the three-component diagonal mixture.](microvan_v4/gmm_bic.png)
+![Exhibit 12. BIC favors the three-component diagonal mixture.](../microvan_v4/gmm_bic.png)
 
 | Components | Diagonal BIC | Full BIC | Full silhouette |
 | --- | --- | --- | --- |
@@ -435,7 +437,7 @@ Python model settings: sklearn FactorAnalysis (maximum likelihood, Varimax, LAPA
 
 ## Appendix C / Data diagnostics and experiment records
 
-![Exhibit C1. Original 30-item Pearson correlation matrix. Full values in correlations.csv.](microvan_v4/correlation_heatmap.png)
+![Exhibit C1. Original 30-item Pearson correlation matrix. Full values in correlations.csv.](../microvan_v4/correlation_heatmap.png)
 
 ### Analysis files and execution
 
