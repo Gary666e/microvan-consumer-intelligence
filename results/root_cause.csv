@@ -1,0 +1,4 @@
+segment,n,positive,selected,tp,fn,recall
+Disengaged,158,26,8,5,21,0.19230769230769232
+Luxury pragmatists,116,65,84,52,13,0.8
+Status seekers,126,29,8,5,24,0.1724137931034483
