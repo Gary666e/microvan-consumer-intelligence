@@ -2,7 +2,7 @@
 
 **Writing sample for Data Scientist and related roles | Kangjie Lin**
 
-Applied data science for product strategy, customer targeting and commercial decision-making. This web edition follows the eight-section consulting report. Survey findings below are offline estimates from the original 400-response case; experimental and causal results are simulations, and the cost scenarios are hypothetical. The original academic analysis was collaborative and the follow-on computational work is AI-assisted.
+Applied data science for product strategy, customer targeting and commercial decision-making. This web edition follows the eight-section consulting report. Survey findings below are offline estimates from the original 400-response case; experimental and causal results are simulations, and the cost scenarios are hypothetical. See [research contributions and data provenance](../data/SIMULATION_PROVENANCE.md).
 
 ## 1. Validate a premium compact niche before committing development capital
 
@@ -30,7 +30,7 @@ Proposed field pilot: randomize concept messaging, specify liking as the primary
 
 ## 6. Optimize incremental effects, not just baseline propensity
 
-A generated observational study includes known treatment effects and selection bias. Naive ATE is 20.76 pp; IPW 9.94 pp; AIPW 11.41 pp versus stipulated 12.24 pp. In a separate simulated holdout, uplift-based allocation outperforms random allocation in expected incremental responses under scenario costs. Real intervention data and identification assumptions are required before deploying a causal policy.
+A simulated observational study includes known treatment effects and selection bias. Naive ATE is 20.76 pp; IPW 9.94 pp; AIPW 11.41 pp versus stipulated 12.24 pp. In a separate simulated holdout, uplift-based allocation outperforms random allocation in expected incremental responses under scenario costs. Real intervention data and identification assumptions are required before deploying a causal policy.
 
 ![Causal estimates](../visualizations/causal_inference.svg)
 
