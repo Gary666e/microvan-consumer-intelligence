@@ -6,6 +6,10 @@
 
 A decision-oriented study of consumer preference, product-market validation, targeting efficiency and constrained allocation for a premium compact family vehicle. Start with the [formatted writing sample (PDF)](reports/Microvan_Writing_Sample.pdf), read the [web edition](reports/portfolio.md), or explore the [analysis notebook](notebooks/01_business_facing_analysis.ipynb).
 
+**[Open the interactive Streamlit demo](https://microvan-consumer-intelligence-hdntmczefiubcdsqjdeyus.streamlit.app)** · [Writing sample (PDF)](reports/Microvan_Writing_Sample.pdf) · [Technical report (PDF)](reports/Microvan_Technical_Report.pdf)
+
+The hosted demo provides an interactive research prototype for preference prediction, segmentation, scenario budget optimization, and monitoring. It is not a production system.
+
 ## Executive recommendation
 
 Advance the microvan concept to a controlled product-validation pilot—not a vehicle launch. Prioritize consumers who value both premium attributes and compact utility, protect exploration of less-represented segments, and validate incremental demand and economics before committing development capital.
@@ -63,6 +67,8 @@ python run_analysis.py
 
 ### Interactive decision application
 
+[Launch the hosted Streamlit demo](https://microvan-consumer-intelligence-hdntmczefiubcdsqjdeyus.streamlit.app).
+
 The repository includes the fitted model and scenario data. After installing the research dependencies (or rebuilding the models with `python run_analysis.py`), start the original local prototype. Load serialized models only from trusted sources:
 
 ```bash
@@ -77,7 +83,7 @@ streamlit run app/dashboard.py
 jupyter lab
 ```
 
-The Streamlit dashboard is optional and uses a quick-start model; the original local application's scoring and optimization interfaces were smoke-tested. No hosted application or production deployment is claimed.
+The Streamlit dashboard is optional and uses a quick-start model; the original local application's scoring and optimization interfaces were smoke-tested. The hosted dashboard is a research demonstration, not a production deployment; local interface smoke tests do not establish cloud runtime validation.
 
 ## Repository guide
 
