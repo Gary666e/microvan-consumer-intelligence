@@ -100,7 +100,7 @@ The Streamlit dashboard is optional and uses a quick-start model; the original l
 
 ## Evidence and limitations
 
-The empirical dataset is the 400-respondent sample supplied with *Grosse Pointe Associates and the “Microvan”* (Modern Marketing Research: Concepts, Methods, and Cases). Original survey outcomes have not been altered or augmented. Simulated interventions, response records and scenario costs are separately identified; they demonstrate analytical methodology, not real causal effects, sales, marketing ROI or commercial deployment. Concept liking is not purchase probability. Cluster coverage is an offline exploratory policy and requires independent validation. The code uses fixed seeds; exact outputs may vary with library versions. Third-party case materials are not relicensed by this repository. See [research contributions and data provenance](data/SIMULATION_PROVENANCE.md).
+The empirical dataset is the 400-respondent sample supplied with *Grosse Pointe Associates and the “Microvan”* (Modern Marketing Research: Concepts, Methods, and Cases). Simulated interventions, response records and scenario costs are separately identified; they demonstrate analytical methodology, not real causal effects, sales, marketing ROI or commercial deployment. Concept liking is not purchase probability. Cluster coverage is an offline exploratory policy and requires independent validation. The code uses fixed seeds; exact outputs may vary with library versions. Third-party case materials are not relicensed by this repository. 
 
 ## Reports and supporting exhibits
 
