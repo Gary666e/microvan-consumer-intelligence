@@ -44,6 +44,22 @@ Under hypothetical per-contact costs, a $1,500 budget and capacity of 100, nomin
 
 Proposed 12-week roadmap: freeze metrics and designs, validate concept positioning and survey burden, evaluate targeting/coverage, stress-test budget policies, then review commercialization readiness. Track verified high-interest completions per dollar, response coverage, quality and opt-outs. In the resampled mix-shift test, precision rises from 62% to 70% while recall falls from 51.7% to 23.9%; score PSI reaches 0.257 and selection falls from 25% to 7.5%. Investigate drift and capacity before changing thresholds, then validate on new labeled data. No automatic rollout or claim of field validation.
 
+### Proposed pilot execution and evaluation
+
+All targets below are planning gates, not achieved field results. Confirm thresholds and sample sizes before collecting new observations.
+
+| Workstream | Execution | Proposed evaluation gate |
+|---|---|---|
+| Product positioning | Randomize comparable concept boards; control price and information exposure | Mean liking improves by at least 0.5 points, with a 95% interval excluding zero; monitor safety perception and price acceptance |
+| Customer targeting | Compare ranked and random outreach at equal capacity | At least 1.5× verified high-interest yield; absolute difference interval excludes zero; monitor segment reach and opt-outs |
+| Survey efficiency | Freeze the 10-item instrument and validate prospectively | At least 25% shorter median completion time; completion-rate loss no greater than 3 pp; upper confidence bound on RMSE increase no greater than 0.10 |
+| Resource allocation | Compare feasible random, probability-per-cost and MILP policies under matched budgets | Zero budget/capacity violations and at least 10% improvement in qualified responses per dollar versus random allocation; justify MILP relative to greedy ranking |
+| Commercial feasibility | Validate demand, willingness to pay, behavioral follow-through and unit economics | Sponsor-approved NPV and downside-risk criteria; no launch decision based on liking alone |
+
+**Weeks 1–2:** freeze model versions, randomization, metrics and guardrails. **Weeks 3–8:** collect independent observations and monitor eligible-to-contacted-to-responded-to-verified-interest funnel counts. **Weeks 9–12:** evaluate effects and uncertainty, validate actual economics, and decide whether to scale, redesign or stop. If a policy underperforms, diagnose delivery, response, segment coverage and score calibration separately; freeze any revision and retest on a fresh sample.
+
+![Proposed pilot roadmap](../visualizations/pilot_gantt.png)
+
 ## Supporting analysis
 
-[Full research report text](decision_science_research.md) · [Execution and evaluation report](execution_evaluation.md) · [Results](../results/) · [Source scripts](../microvan_v3/) · [Notebook](../notebooks/01_business_facing_analysis.ipynb)
+[Formatted writing sample (PDF)](Microvan_Writing_Sample.pdf) · [Full technical report (PDF)](Microvan_Technical_Report.pdf) · [Results](../results/) · [Source scripts](../microvan_v3/) · [Notebook](../notebooks/01_business_facing_analysis.ipynb)
