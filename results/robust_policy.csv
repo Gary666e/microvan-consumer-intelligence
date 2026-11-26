@@ -1,0 +1,3 @@
+policy,contacts,nominal_cost,nominal_expected,worst_design_expected,observed_interest,MC_mean_expected,MC_p05_expected,MC_budget_violation
+Nominal,100,1500,52.78202392119456,43.282023921194565,57,51.00503603843618,42.870076391639735,1.0
+Maximin robust,91,1304,47.50771062456374,39.58771062456374,50,45.89204658898653,38.94644518070329,0.0
