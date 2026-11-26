@@ -61,26 +61,6 @@ To run the complete research scripts in dependency order (these regenerate the d
 python run_analysis.py
 ```
 
-### Interactive decision application
-
-[Launch the hosted Streamlit demo](https://microvan-consumer-intelligence-hdntmczefiubcdsqjdeyus.streamlit.app).
-
-The repository includes the fitted model and scenario data. After installing the research dependencies (or rebuilding the models with `python run_analysis.py`), start the original local prototype. Load serialized models only from trusted sources:
-
-```bash
-python microvan_v4/app.py
-```
-
-Open **http://127.0.0.1:8765**. It supports preference scoring, segment assignment, scenario budget optimization and input diagnostics. The alternative Streamlit interface and notebook can be started with:
-
-```bash
-python -m pip install -r requirements-app.txt
-streamlit run app/dashboard.py
-jupyter lab
-```
-
-The Streamlit dashboard is optional and uses a quick-start model; the original local application's scoring and optimization interfaces were smoke-tested. The hosted dashboard is a research demonstration, not a production deployment; local interface smoke tests do not establish cloud runtime validation.
-
 ## Repository guide
 
 - [data/](data/) — unchanged original case survey and data dictionary.
