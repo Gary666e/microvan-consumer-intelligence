@@ -1,0 +1,41 @@
+model,fold,parameters
+Mean,1,{}
+OLS,1,{}
+Factor OLS,1,{}
+Ridge,1,{'ridge__alpha': 100}
+Lasso,1,{'lasso__alpha': 0.1}
+Elastic net,1,"{'elasticnet__alpha': 0.3, 'elasticnet__l1_ratio': 0.2}"
+Random forest,1,"{'max_depth': 6, 'min_samples_leaf': 8}"
+Gradient boosting,1,"{'learning_rate': 0.1, 'max_depth': 2, 'n_estimators': 50}"
+Mean,2,{}
+OLS,2,{}
+Factor OLS,2,{}
+Ridge,2,{'ridge__alpha': 100}
+Lasso,2,{'lasso__alpha': 0.1}
+Elastic net,2,"{'elasticnet__alpha': 0.3, 'elasticnet__l1_ratio': 0.2}"
+Random forest,2,"{'max_depth': 6, 'min_samples_leaf': 8}"
+Gradient boosting,2,"{'learning_rate': 0.1, 'max_depth': 1, 'n_estimators': 100}"
+Mean,3,{}
+OLS,3,{}
+Factor OLS,3,{}
+Ridge,3,{'ridge__alpha': 100}
+Lasso,3,{'lasso__alpha': 0.1}
+Elastic net,3,"{'elasticnet__alpha': 0.3, 'elasticnet__l1_ratio': 0.2}"
+Random forest,3,"{'max_depth': 6, 'min_samples_leaf': 3}"
+Gradient boosting,3,"{'learning_rate': 0.1, 'max_depth': 2, 'n_estimators': 50}"
+Mean,4,{}
+OLS,4,{}
+Factor OLS,4,{}
+Ridge,4,{'ridge__alpha': 100}
+Lasso,4,{'lasso__alpha': 0.1}
+Elastic net,4,"{'elasticnet__alpha': 0.3, 'elasticnet__l1_ratio': 0.2}"
+Random forest,4,"{'max_depth': 6, 'min_samples_leaf': 8}"
+Gradient boosting,4,"{'learning_rate': 0.1, 'max_depth': 1, 'n_estimators': 100}"
+Mean,5,{}
+OLS,5,{}
+Factor OLS,5,{}
+Ridge,5,{'ridge__alpha': 100}
+Lasso,5,{'lasso__alpha': 0.1}
+Elastic net,5,"{'elasticnet__alpha': 0.3, 'elasticnet__l1_ratio': 0.2}"
+Random forest,5,"{'max_depth': 6, 'min_samples_leaf': 3}"
+Gradient boosting,5,"{'learning_rate': 0.1, 'max_depth': 1, 'n_estimators': 100}"

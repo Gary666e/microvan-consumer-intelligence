@@ -1,0 +1,3 @@
+period,n,luxury_share,positive_rate,selection_rate,precision,recall,auc,score_psi
+Reference survey,400,0.29,0.3,0.25,0.62,0.5166666666666667,0.7660714285714285,0.0
+Resampled mix-shift stress,400,0.0725,0.22,0.075,0.7,0.23863636363636365,0.734775641025641,0.25721668462950853
