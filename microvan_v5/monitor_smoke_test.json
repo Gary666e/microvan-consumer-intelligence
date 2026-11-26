@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "status": "PASS",
+    "alerts": [],
+    "release_gate": "No automatic retraining or rollout; require labeled independent validation and owner approval."
+  },
+  "stress": {
+    "status": "REVIEW",
+    "alerts": [
+      {
+        "alert": "score drift",
+        "action": "Investigate feature/segment mix and score drift."
+      },
+      {
+        "alert": "recall degradation",
+        "action": "Inspect segment recall; compare fixed-capacity and coverage policies."
+      },
+      {
+        "alert": "capacity utilization",
+        "action": "Review decision threshold and contact capacity."
+      }
+    ],
+    "release_gate": "No automatic retraining or rollout; require labeled independent validation and owner approval."
+  },
+  "test": "PASS"
+}
