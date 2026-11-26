@@ -4,6 +4,3 @@
 
 The original case prompt and unredacted student team submission are not distributed; the case is cited in the reports and the numerical R outputs are included in the technical appendix.
 
-## Research contributions
-
-The original academic case analysis was collaborative. Follow-on computational studies, simulations, and portfolio reporting include AI-assisted extensions. The observed survey and the simulated intervention and cost records are distinct sources.
