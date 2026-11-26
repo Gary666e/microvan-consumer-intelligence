@@ -1,0 +1,131 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               mvliking   R-squared:                       0.373
+Model:                            OLS   Adj. R-squared:                  0.322
+Method:                 Least Squares   F-statistic:                     7.314
+Date:                Wed, 25 Nov 2026   Prob (F-statistic):           4.96e-23
+Time:                        16:57:47   Log-Likelihood:                -869.56
+No. Observations:                 400   AIC:                             1801.
+Df Residuals:                     369   BIC:                             1925.
+Df Model:                          30                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.3813      2.959      0.129      0.898      -5.436       6.199
+kidtrans       0.2411      0.165      1.463      0.144      -0.083       0.565
+miniboxy       0.1779      0.129      1.376      0.170      -0.076       0.432
+lthrbetr       0.2476      0.122      2.030      0.043       0.008       0.487
+secbiggr      -0.1048      0.106     -0.990      0.323      -0.313       0.103
+safeimpt      -0.0185      0.134     -0.139      0.890      -0.281       0.244
+buyhghnd       0.1126      0.116      0.969      0.333      -0.116       0.341
+pricqual       0.1053      0.105      1.005      0.316      -0.101       0.311
+prmsound       0.0101      0.108      0.093      0.926      -0.203       0.223
+perfimpt       0.2327      0.128      1.815      0.070      -0.019       0.485
+tkvacatn       0.1662      0.125      1.333      0.183      -0.079       0.411
+noparkrm       0.1781      0.116      1.538      0.125      -0.050       0.406
+homlrgst      -0.2087      0.122     -1.705      0.089      -0.449       0.032
+envrminr      -0.0332      0.123     -0.271      0.787      -0.275       0.208
+needbetw       0.1285      0.103      1.252      0.211      -0.073       0.330
+suvcmpct       0.2151      0.123      1.754      0.080      -0.026       0.456
+next2str       0.0243      0.107      0.227      0.820      -0.186       0.234
+carefmny      -0.2431      0.134     -1.809      0.071      -0.507       0.021
+shdcarpl      -0.2868      0.122     -2.343      0.020      -0.527      -0.046
+imprtapp       0.0591      0.104      0.567      0.571      -0.146       0.264
+lk4whldr      -0.0641      0.127     -0.506      0.613      -0.313       0.185
+kidsbulk      -0.0970      0.122     -0.794      0.428      -0.337       0.143
+wntguzlr      -0.0289      0.116     -0.250      0.803      -0.256       0.199
+nordtrps       0.0731      0.127      0.573      0.567      -0.178       0.324
+stylclth       0.0158      0.114      0.139      0.890      -0.208       0.239
+strngwrn      -0.1968      0.113     -1.735      0.084      -0.420       0.026
+passnimp       0.1620      0.119      1.360      0.175      -0.072       0.396
+twoincom       0.1704      0.096      1.767      0.078      -0.019       0.360
+nohummer       0.0091      0.096      0.095      0.925      -0.179       0.197
+aftrschl      -0.0257      0.117     -0.221      0.825      -0.255       0.203
+accesfun      -0.0035      0.122     -0.028      0.977      -0.244       0.237
+==============================================================================
+Omnibus:                        2.879   Durbin-Watson:                   1.945
+Prob(Omnibus):                  0.237   Jarque-Bera (JB):                2.565
+Skew:                           0.112   Prob(JB):                        0.277
+Kurtosis:                       2.678   Cond. No.                         727.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+BACKWARD AIC
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               mvliking   R-squared:                       0.358
+Model:                            OLS   Adj. R-squared:                  0.339
+Method:                 Least Squares   F-statistic:                     19.64
+Date:                Wed, 25 Nov 2026   Prob (F-statistic):           2.08e-31
+Time:                        16:57:47   Log-Likelihood:                -874.35
+No. Observations:                 400   AIC:                             1773.
+Df Residuals:                     388   BIC:                             1821.
+Df Model:                          11                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          2.8532      1.771      1.611      0.108      -0.629       6.335
+miniboxy       0.1856      0.116      1.595      0.112      -0.043       0.414
+lthrbetr       0.3080      0.110      2.808      0.005       0.092       0.524
+perfimpt       0.2831      0.092      3.065      0.002       0.101       0.465
+tkvacatn       0.1750      0.114      1.531      0.127      -0.050       0.400
+noparkrm       0.1843      0.109      1.698      0.090      -0.029       0.398
+homlrgst      -0.2012      0.111     -1.814      0.070      -0.419       0.017
+suvcmpct       0.2190      0.107      2.042      0.042       0.008       0.430
+carefmny      -0.3035      0.115     -2.629      0.009      -0.530      -0.077
+shdcarpl      -0.3050      0.086     -3.548      0.000      -0.474      -0.136
+strngwrn      -0.1903      0.101     -1.892      0.059      -0.388       0.007
+twoincom       0.1971      0.087      2.259      0.024       0.026       0.369
+==============================================================================
+Omnibus:                        2.843   Durbin-Watson:                   1.977
+Prob(Omnibus):                  0.241   Jarque-Bera (JB):                2.627
+Skew:                           0.128   Prob(JB):                        0.269
+Kurtosis:                       2.697   Cond. No.                         265.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+FACTOR OLS
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               mvliking   R-squared:                       0.337
+Model:                            OLS   Adj. R-squared:                  0.328
+Method:                 Least Squares   F-statistic:                     39.97
+Date:                Wed, 25 Nov 2026   Prob (F-statistic):           3.29e-33
+Time:                        16:57:47   Log-Likelihood:                -880.83
+No. Observations:                 400   AIC:                             1774.
+Df Residuals:                     394   BIC:                             1798.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+================================================================================
+                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------
+const            4.8425      0.110     43.925      0.000       4.626       5.059
+Luxury           1.0877      0.116      9.365      0.000       0.859       1.316
+Practicality     1.0408      0.115      9.077      0.000       0.815       1.266
+Family           0.2154      0.114      1.895      0.059      -0.008       0.439
+Safety          -0.5719      0.116     -4.939      0.000      -0.800      -0.344
+Environment     -0.2078      0.119     -1.747      0.081      -0.442       0.026
+==============================================================================
+Omnibus:                        5.671   Durbin-Watson:                   1.945
+Prob(Omnibus):                  0.059   Jarque-Bera (JB):                3.793
+Skew:                           0.057   Prob(JB):                        0.150
+Kurtosis:                       2.537   Cond. No.                         1.11
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+            Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+============================================================================
+      group1             group2       meandiff p-adj   lower   upper  reject
+----------------------------------------------------------------------------
+        Disengaged Luxury pragmatists   2.7174    0.0   2.016  3.4188   True
+        Disengaged     Status seekers   0.5346 0.1594 -0.1506  1.2197  False
+Luxury pragmatists     Status seekers  -2.1828    0.0 -2.9209 -1.4447   True
+----------------------------------------------------------------------------
