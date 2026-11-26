@@ -4,7 +4,7 @@
 
 A decision-oriented study of consumer preference, product-market validation, targeting efficiency and constrained allocation for a premium compact family vehicle. Start with the [formatted writing sample (PDF)](reports/Microvan_Writing_Sample.pdf), read the [web edition](reports/portfolio.md), or explore the [analysis notebook](notebooks/01_business_facing_analysis.ipynb).
 
-**[Open the interactive Streamlit demo](https://microvan-consumer-intelligence-hdntmczefiubcdsqjdeyus.streamlit.app)** · [Writing sample (PDF)](reports/Microvan_Writing_Sample.pdf) · [Technical report (PDF)](reports/Microvan_Technical_Report.pdf)
+**[Open the interactive Streamlit demo](https://microvan-consumer-intelligence-hdntmczefiubcdsqjdeyus.streamlit.app)** [Technical report (PDF)](reports/Microvan_Technical_Report.pdf)
 
 The hosted demo provides an interactive research prototype for preference prediction, segmentation, scenario budget optimization, and monitoring. It is not a production system.
 
@@ -100,13 +100,3 @@ The Streamlit dashboard is optional and uses a quick-start model; the original l
 
 The empirical dataset is the 400-respondent sample supplied with *Grosse Pointe Associates and the “Microvan”* (Modern Marketing Research: Concepts, Methods, and Cases). Simulated interventions, response records and scenario costs are separately identified; they demonstrate analytical methodology, not real causal effects, sales, marketing ROI or commercial deployment. Concept liking is not purchase probability. Cluster coverage is an offline exploratory policy and requires independent validation. The code uses fixed seeds; exact outputs may vary with library versions. Third-party case materials are not relicensed by this repository. 
 
-## Reports and supporting exhibits
-
-- [Writing sample — cover + 8-page consulting report (PDF)](reports/Microvan_Writing_Sample.pdf)
-- [Editable writing sample (Word)](reports/Microvan_Writing_Sample_Editable.docx)
-- [Editable cover (Word)](reports/Data_Science_Cover_Editable.docx)
-- [Full technical report (PDF)](reports/Microvan_Technical_Report.pdf)
-- [High-resolution exhibit gallery](visualizations/)
-- [Validation notes](reports/VALIDATION.md) and [simulation provenance](data/SIMULATION_PROVENANCE.md)
-
-All formatted reports, archived research outputs, original statistical exhibits and fitted model files are included in this repository. The 44 supplementary files were verified byte-for-byte against their release inventory using Git blob hashes.
