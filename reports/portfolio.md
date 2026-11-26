@@ -2,7 +2,7 @@
 
 **Writing sample for Data Scientist and related roles | Kangjie Lin**
 
-Applied data science for product strategy, customer targeting and commercial decision-making. This web edition follows the eight-section consulting report. Survey findings below are offline estimates from the original 400-response case; experimental and causal results are simulations, and the cost scenarios are hypothetical. See [research contributions and data provenance](../data/SIMULATION_PROVENANCE.md).
+Applied data science for product strategy, customer targeting and commercial decision-making. This web edition follows the eight-section consulting report. Survey findings below are offline estimates from the original 400-response case; experimental and causal results are simulations, and the cost scenarios are hypothetical.
 
 ## 1. Validate a premium compact niche before committing development capital
 
