@@ -2,9 +2,9 @@
 
 **Business-facing Data Science Portfolio | Kangjie Lin**
 
-A decision-oriented study of consumer preference, product-market validation, targeting efficiency and constrained allocation for a premium compact family vehicle. Start with the [formatted writing sample (PDF)](reports/Microvan_Writing_Sample.pdf), read the [web edition](reports/portfolio.md), or explore the [analysis notebook](notebooks/01_business_facing_analysis.ipynb).
+A decision-oriented study of consumer preference, product-market validation, targeting efficiency and constrained allocation for a premium compact family vehicle. Start with the (reports/Microvan_Technical_Report.pdf), read the [web edition](reports/portfolio.md), or explore the [analysis notebook](notebooks/01_business_facing_analysis.ipynb).
 
-**[Open the interactive Streamlit demo](https://microvan-consumer-intelligence-hdntmczefiubcdsqjdeyus.streamlit.app)** [Technical report (PDF)](reports/Microvan_Technical_Report.pdf)
+**[Open the interactive Streamlit demo](https://microvan-consumer-intelligence-hdntmczefiubcdsqjdeyus.streamlit.app)** [Technical report (PDF)]
 
 The hosted demo provides an interactive research prototype for preference prediction, segmentation, scenario budget optimization, and monitoring. It is not a production system.
 
