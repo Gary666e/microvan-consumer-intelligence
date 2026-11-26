@@ -15,4 +15,4 @@ The original case survey is in [microvan.csv](microvan.csv). It contains 400 scr
 | educ | 1 high school, 2 some college, 3 undergraduate, 4 graduate |
 | recycle | Self-reported recycling relative to average, 1–5 |
 
-Source: *Grosse Pointe Associates and the “Microvan”*, capstone case, Modern Marketing Research: Concepts, Methods, and Cases. Case data are distinct from simulated intervention and scenario cost records. See [research contributions and data provenance](SIMULATION_PROVENANCE.md). No realized sales, campaign outcomes or causal effects were collected in the survey.
+Source: *Grosse Pointe Associates and the “Microvan”*, capstone case, Modern Marketing Research: Concepts, Methods, and Cases. Case data are distinct from simulated intervention and scenario cost records.
