@@ -1,0 +1,85 @@
+{
+  "/": 200,
+  "/summary": 200,
+  "/columns": 200,
+  "/score{'values': [5, 5, 5, 5, 5, 5, 5, 5, 5, 5": {
+    "liking": 5.1723228088910185,
+    "probability": 0.31455522114706785,
+    "segment": "Luxury pragmatists",
+    "centroid_distance": 1.169690932387584,
+    "distance_margin": 0.09066236630632485,
+    "soft_component_probability": [
+      0.1599389868288646,
+      0.40701724200050343,
+      0.4330437711706317
+    ],
+    "interval_model_center": 5.149943869940655,
+    "interval_90": [
+      1.4090799992218503,
+      8.89080774065946
+    ],
+    "reference_prediction": 4.8425,
+    "contributions": {
+      "kidtrans": 0.002601665112785387,
+      "miniboxy": 0.055591904896527905,
+      "lthrbetr": 0.04960576158163299,
+      "secbiggr": -0.015363819255710192,
+      "safeimpt": -0.0003957968003289067,
+      "buyhghnd": -0.04806274941615398,
+      "pricqual": 0.004842543628849058,
+      "prmsound": 0.01726422775680701,
+      "perfimpt": 0.0,
+      "tkvacatn": 0.032860205927789515,
+      "noparkrm": 0.0656100614073328,
+      "homlrgst": 0.04417120029569909,
+      "envrminr": -0.06459582944848813,
+      "needbetw": 0.0050461358158291805,
+      "suvcmpct": 0.028884506511851205,
+      "next2str": -0.014543258678765053,
+      "carefmny": 0.03424340630793276,
+      "shdcarpl": 0.02331749717766818,
+      "imprtapp": 0.007097948313442621,
+      "lk4whldr": 0.021754023431119485,
+      "kidsbulk": 0.0044091797071232584,
+      "wntguzlr": -0.0021339466095352615,
+      "nordtrps": 0.00024276678744264787,
+      "stylclth": -0.027345589836176527,
+      "strngwrn": 0.0027855949044747453,
+      "passnimp": 0.05061788541285111,
+      "twoincom": 0.013303447330947519,
+      "nohummer": 0.009565360503883626,
+      "aftrschl": 0.001387112013405765,
+      "accesfun": 0.027061364110780712
+    }
+  },
+  "/optimize{'budget': 1500, 'capacity': 100, 'floor": {
+    "status": "Optimal",
+    "contacts": 100,
+    "cost": 1500,
+    "expected_high_interest": 52.78202392119456,
+    "observed_high_interest": 57,
+    "segment_counts": {
+      "Disengaged": 12,
+      "Luxury pragmatists": 75,
+      "Status seekers": 13
+    },
+    "gap": 0.0
+  },
+  "/optimize{'budget': 20, 'capacity': 10, 'floor': ": {
+    "status": "No feasible solution found",
+    "solver_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+  },
+  "/monitor{'batch': [[5, 5, 5, 5, 5, 5, 5, 5, 5, 5": {
+    "rows": 2,
+    "valid_rows": 1,
+    "invalid_cells": 30,
+    "largest_standardized_mean_shifts": {
+      "lthrbetr": 0.4941854510862176,
+      "aftrschl": 0.40841987518045464,
+      "passnimp": 0.40841987518045464,
+      "tkvacatn": 0.3662992952700892,
+      "kidsbulk": 0.35267192800542313
+    },
+    "note": "Descriptive checks only; no drift thresholds validated. Outcome error requires observed labels."
+  }
+}
