@@ -2,50 +2,98 @@
 
 **Business-facing Data Science Portfolio | Kangjie Lin**
 
-A decision-oriented analysis of consumer preferences for a premium compact family vehicle. The project connects statistical learning and customer segmentation with targeting, experimental design, causal methods, constrained resource allocation and operational monitoring.
+*Think like a business analyst. Build like a data scientist. Deliver like a business partner.*
 
-## Business question
+A decision-oriented study of consumer preference, product-market validation, targeting efficiency and constrained allocation for a premium compact family vehicle. Start with the [portfolio writing sample (web edition)](reports/portfolio.md) or explore the [analysis notebook](notebooks/01_business_facing_analysis.ipynb).
 
-Should an automotive company advance the microvan concept to controlled product validation, which consumers should it prioritize, and how can it allocate limited research and outreach resources?
+## Executive recommendation
 
-**Recommendation:** prioritize luxury-oriented consumers with practical sizing needs, validate product positioning through controlled experiments, and gate further investment on independently measured commercial outcomes.
+Advance the microvan concept to a controlled product-validation pilot—not a vehicle launch. Prioritize consumers who value both premium attributes and compact utility, protect exploration of less-represented segments, and validate incremental demand and economics before committing development capital.
 
-## Key findings
+| Observed survey / offline model result | Quantitative finding |
+| --- | --- |
+| Original case sample | 400 respondents, 30 attitude items |
+| Five-factor OLS | Out-of-fold RMSE 2.236 vs 2.701 mean baseline (17.2% lower) |
+| Model parsimony | 30 attributes compressed into five latent dimensions |
+| Targeting effectiveness | 62% precision at top 100 vs 30% prevalence; 2.07× lift |
+| Root cause diagnosis | 45 of 58 missed high-interest respondents outside the core segment |
+| Corrective policy | Minimum 10 per segment retained 62 hits at the same 100-contact capacity |
+| Questionnaire efficiency | 10-item selection policy RMSE 2.272 vs 2.264 tuned 30-item Ridge; fixed questionnaire requires prospective validation |
 
-The following results use the original 400-respondent case survey and internal out-of-fold predictions.
+![Out-of-fold model comparison](visualizations/model_benchmark.svg)
 
-| Finding | Result | Decision implication |
-| --- | ---: | --- |
-| Predictive RMSE | 2.236 vs. 2.701 mean baseline | 17.2% lower error with a five-factor regression |
-| Model dimension | 30 attributes → 5 factors | Favor interpretable, parsimonious models |
-| Targeting precision at 25% capacity | 62% vs. 30% prevalence | 2.07× offline targeting lift |
-| Missed high-interest respondents | 58; 45 outside the core segment | Diagnose coverage gaps rather than optimize precision alone |
-| Coverage policy | 10 minimum selections per segment; 62 hits retained | Explore broader segment coverage on independent data |
-| Short survey | 10 vs. 30 items; RMSE 2.272 vs. 2.264 tuned Ridge | Validate a shorter fixed questionnaire before rollout |
+![Coverage diagnosis](visualizations/root_cause.svg)
 
-## Analytical approach
+## Technical scope
 
-1. Data audit, exploratory analysis and factor extraction.
-2. Regression and classification with nested cross-validation; model comparison, calibration and uncertainty.
-3. Hierarchical clustering, K-means, mixture models and stability testing.
-4. Product metrics, targeting lift, segment-level error diagnosis and policy evaluation.
-5. Experimental design and **simulation-based** A/B analysis, CUPED, propensity weighting, doubly robust estimation and uplift modeling.
-6. Mixed-integer optimization under scenario costs and budget constraints.
-7. Execution roadmap, offline monitoring, corrective actions and evaluation gates.
+| Workstream | Methods |
+| --- | --- |
+| Statistical learning | OLS, stepwise AIC, factor analysis, nested cross-validation, Ridge, Lasso, Elastic Net, RF, gradient boosting, XGBoost, ordinal logistic regression |
+| Customer intelligence | Ward clustering, K-means, GMM, bootstrap cluster stability, ANOVA, Tukey contrasts |
+| Predictive decisions | Calibrated classification, conformal intervals, feature selection, linear SHAP contributions, cost-sensitive thresholds |
+| Product analytics | KPI tree, targeting lift, error decomposition, coverage policy and monitoring |
+| Experimentation (simulation) | Random assignment, SRM, power, Holm adjustment, CUPED |
+| Causal ML (simulation) | Cross-fitted IPW/AIPW, propensity matching, S/T/X-learners, honest transformed-outcome forest, Qini |
+| Prescriptive analytics (scenario) | Mixed-integer optimization, budget frontier, maximin robustness, Monte Carlo stress |
+| Business delivery | Pilot roadmap, acceptance criteria, local application and monitoring review gates |
 
-## Selected results
+![Simulated causal estimate comparison](visualizations/causal_inference.svg)
 
-- [Predictive model benchmark](results/model_benchmark.csv)
-- [Segment-level diagnosis](results/root_cause.csv)
-- [Coverage-policy evaluation](results/coverage_policy.csv)
-- [Causal estimators (simulation)](results/simulated_causal_estimators.csv)
-- [Monitoring stress test](results/monitoring_stress.csv)
-- [Offline monitoring example](src/monitor.py)
+![Budget frontier under hypothetical costs](visualizations/budget_frontier.svg)
+
+## Get started
+
+Use Python 3.13 (the research runtime) and a clean virtual environment.
+
+```bash
+git clone https://github.com/Gary666e/microvan-consumer-intelligence.git
+cd microvan-consumer-intelligence
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python src/quickstart.py
+python -m unittest discover -s tests
+```
+
+To run the complete research scripts in dependency order (these regenerate the detailed CSVs, separate simulation records, figures and fitted model artifact):
+
+```bash
+python run_analysis.py
+```
+
+### Interactive decision application
+
+After the full analysis run, start the original local prototype:
+
+```bash
+python microvan_v4/app.py
+```
+
+Open **http://127.0.0.1:8765**. It supports preference scoring, segment assignment, scenario budget optimization and input diagnostics. The alternative Streamlit interface and notebook can be started with:
+
+```bash
+python -m pip install -r requirements-app.txt
+streamlit run app/dashboard.py
+jupyter lab
+```
+
+The Streamlit dashboard is optional and uses a quick-start model; the original local application's scoring and optimization interfaces were smoke-tested. No hosted application or production deployment is claimed.
+
+## Repository guide
+
+- [data/](data/) — unchanged original case survey and data dictionary.
+- [notebooks/](notebooks/) — interactive quick-start notebook.
+- [src/](src/) — compact analysis and monitoring examples.
+- [microvan_v3/](microvan_v3/) — full statistical modeling, clustering and inference script.
+- [microvan_v4/](microvan_v4/) — full supervised learning, survey selection, uncertainty, budget optimization and application code.
+- [microvan_v5/](microvan_v5/) — experimentation, causal inference, uplift, robust allocation and monitoring code.
+- [results/](results/) — archived quantitative outputs and diagnostic tables.
+- [visualizations/](visualizations/) — web-readable charts.
+- [reports/](reports/) — web portfolio and detailed research/execution report text.
+- [tests/](tests/) — data, optimization and monitoring smoke tests.
 
 ## Evidence and limitations
 
-The empirical dataset is a 400-respondent sample supplied with the academic case *Grosse Pointe Associates and the “Microvan”* (Modern Marketing Research: Concepts, Methods, and Cases). The original academic analysis was a team case; subsequent Python modeling, experimental simulations and reporting are AI-assisted extensions. Concept liking is not purchase behavior. Generated experimental records and hypothetical outreach costs are separate from the original survey; they demonstrate analytical methods rather than realized sales, causal marketing effects or actual ROI. The decision system is a local prototype, not a production deployment. External validation and live experimentation remain future work.
+The empirical dataset is the 400-respondent sample supplied with *Grosse Pointe Associates and the “Microvan”* (Modern Marketing Research: Concepts, Methods, and Cases). The original academic analysis was collaborative; the additional Python studies and reporting are AI-assisted extensions. Original survey outcomes have not been altered or augmented. Generated interventions, response records and hypothetical costs are separately identified; they demonstrate analytical methodology, not real causal effects, sales, marketing ROI or commercial deployment. Concept liking is not purchase probability. Cluster coverage is an offline exploratory policy and requires independent validation. The code uses fixed seeds; exact outputs may vary with library versions. Third-party case materials are not relicensed by this repository.
 
-## Repository status
-
-This initial portfolio snapshot includes the project overview, selected analysis outputs and a monitoring example. The full analysis package, figures, application and formatted reports are maintained separately pending upload. No license is granted to third-party case materials.
+Formatted PDF/Word reports and the original high-resolution exhibit set are supplied in the separate portfolio release package pending binary upload; the web writing sample, research scripts and core survey outputs are available here.
