@@ -6,4 +6,4 @@
 - Input validation: one valid row and one 30-cell invalid row correctly detected.
 - Offline monitoring: baseline PASS; mix-shift stress REVIEW, with score drift, recall degradation, and capacity alerts.
 - All packaged Python scripts parsed successfully. Complete training was performed in earlier research runs, not repeated for every script during this packaging step. Streamlit UI was not run in the current environment.
-- Cover plus writing sample: 9 PDF pages.
+
